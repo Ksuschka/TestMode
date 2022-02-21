@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/fx0j7u63yfgnb353?svg=true)](https://ci.appveyor.com/project/Ksuschka/testmode)
