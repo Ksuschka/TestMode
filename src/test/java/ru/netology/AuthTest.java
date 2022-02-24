@@ -24,7 +24,7 @@ public class AuthTest {
     }
     @Test
     void shouldValidLoginPassword() {
-        Registration validUser = DataGenerator.generateValidUser();
+        Registration validUser = DataGenerator.generateUser("active");
         $("[data-test-id=login] input").setValue(validUser.getLogin());
         $("[data-test-id=password] input").setValue(validUser.getPassword());
         $$("button").find(exactText("Продолжить")).click();
@@ -52,7 +52,7 @@ public class AuthTest {
     }
     @Test
     void shouldBlockedUser() {
-        Registration blockedUser = DataGenerator.generateBlockedUser();
+        Registration blockedUser = DataGenerator.generateUser("blocked");
         $("[data-test-id=login] input").setValue(blockedUser.getLogin());
         $("[data-test-id=password] input").setValue(blockedUser.getPassword());
         $$("button").find(exactText("Продолжить")).click();

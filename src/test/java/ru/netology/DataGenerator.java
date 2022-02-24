@@ -46,17 +46,11 @@ public class DataGenerator {
         return password;
     }
 
-    public static Registration generateValidUser() {
-        Registration registration = new Registration(generateLogin(), generatePassword(), "active");
-        registrationRequest(registration);
-        return registration;
-    }
-
-    public static Registration generateBlockedUser() {
-        Registration registration = new Registration(generateLogin(), generatePassword(), "blocked");
-        registrationRequest(registration);
-        return registration;
-    }
+public static Registration generateUser(String status) {
+    Registration registration = new Registration(generateLogin(), generatePassword(), status);
+    registrationRequest(registration);
+    return registration;
+}
 
     public static Registration generateInvalidPassword(String status) {
         String login = generateLogin();
